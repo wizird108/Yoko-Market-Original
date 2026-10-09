@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <!-- UTF-8 conserva tildes; viewport permite que las media queries funcionen. -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   YokoMarket
+  </title>
+  <link href="../../src/css/style.css" rel="stylesheet"/>
+  <!-- defer conserva este orden: estructura común → datos → DOM → vista. -->
+  <script defer="" src="../../src/js/componentes.js">
+  </script>
+  <script defer="" src="../../src/js/almacenamiento.js">
+  </script>
+  <script defer="" src="../../src/data/datos.js">
+  </script>
+  <script defer="" src="../../src/js/productos.js">
+  </script>
+  <script defer="" src="../js/interacciones.js">
+  </script>
+  <script defer="" src="../../src/js/main.js">
+  </script>
+  <script defer="" src="../js/paneles.js">
+  </script>
+  <script defer="" src="../../src/js/catalogo.js">
+  </script>
+  <link href="../css/ajustes.css" rel="stylesheet"/>
+ </head>
+ <body data-base="../../" data-categoria="sale" data-vista="catalogo">
+  <!-- Header y footer se definen una sola vez en componentes.js. -->
+  <div id="header-compartido">
+  </div>
+  <!-- Ningún producto se escribe manualmente en este HTML. -->
+  <main id="contenido">
+  </main>
+  <div id="footer-compartido">
+  </div>
+  <p class="mensaje-interaccion" hidden="" id="mensaje-interaccion" role="status">
+  </p>
+  <noscript>
+   Activa JavaScript para mostrar las vistas y los productos.
+  </noscript>
+ </body>
+</html>
