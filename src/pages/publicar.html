@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <!-- viewport permite adaptar los mismos elementos a móvil y escritorio. -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Publicar producto | YokoMarket
+  </title>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/sistema.css" rel="stylesheet"/>
+  <!-- defer respeta el orden: header, almacenamiento, datos, DOM y vista. -->
+  <script defer="" src="../js/componentes.js">
+  </script>
+  <script defer="" src="../js/almacenamiento.js">
+  </script>
+  <script defer="" src="../data/datos.js">
+  </script>
+  <script defer="" src="../js/productos.js">
+  </script>
+  <script defer="" src="../js/interacciones.js">
+  </script>
+  <script defer="" src="../js/main.js">
+  </script>
+  <script defer="" src="../js/paneles.js">
+  </script>
+  <script defer="" src="../js/publicar.js">
+  </script>
+  <link href="../css/ajustes.css" rel="stylesheet"/>
+ </head>
+ <body data-base="../../" data-vista="publicar">
+  <!-- No se copia el header: la función cargarHeader lo genera aquí. -->
+  <div id="header-compartido">
+  </div>
+  <main id="contenido">
+   <!-- Datos del anuncio y fotos se mantienen dentro de un único formulario. -->
+   <section class="publicar-intro">
+    <h1>
+     PUBLICAR PRODUCTO
+    </h1>
+    <p>
+     Completa la información para compartir tu pieza con la comunidad.
+    </p>
+   </section>
+   <form class="panel publicar-panel" id="form-publicar">
+    <div class="fotos-publicar">
+     <h2>
+      FOTOS DEL PRODUCTO
+     </h2>
+     <label class="foto-portada" for="foto-0">
+      <img alt="Vista previa de portada" hidden="" id="preview-0"/>
+      <span id="texto-foto-0">
+       + SUBIR FOTO DE PORTADA
+      </span>
+     </label>
+     <input accept="image/png,image/jpeg,image/webp" id="foto-0" required="" type="file"/>
+     <div class="fotos-extra">
+      <div>
+       <label class="foto-extra" for="foto-1">
+        <img alt="Vista previa adicional 1" hidden="" id="preview-1"/>
+        <span id="texto-foto-1">
+         + FOTO
+        </span>
+       </label>
+       <input accept="image/png,image/jpeg,image/webp" id="foto-1" type="file"/>
+      </div>
+      <div>
+       <label class="foto-extra" for="foto-2">
+        <img alt="Vista previa adicional 2" hidden="" id="preview-2"/>
+        <span id="texto-foto-2">
+         + FOTO
+        </span>
+       </label>
+       <input accept="image/png,image/jpeg,image/webp" id="foto-2" type="file"/>
+      </div>
+      <div>
+       <label class="foto-extra" for="foto-3">
+        <img alt="Vista previa adicional 3" hidden="" id="preview-3"/>
+        <span id="texto-foto-3">
+         + FOTO
+        </span>
+       </label>
+       <input accept="image/png,image/jpeg,image/webp" id="foto-3" type="file"/>
+      </div>
+     </div>
+     <p class="nota-local">
+      JPG, PNG o WebP, máximo 300 KB por foto. Se guardan solo en este navegador.
+     </p>
+    </div>
+    <div class="datos-publicar">
+     <div class="campos-dobles">
+      <div class="campo">
+       <label for="nombre">
+        TÍTULO
+       </label>
+       <input id="nombre" maxlength="100" name="nombre" placeholder="Ej. Hoodie Sayonara azul" required="" type="text"/>
+      </div>
+      <div class="campo">
+       <label for="categoria">
+        CATEGORÍA
+       </label>
+       <select id="categoria">
+        <option value="ropa">
+         Ropa
+        </option>
+        <option value="peluches">
+         Peluches
+        </option>
+        <option value="vinilos">
+         Vinilos
+        </option>
+        <option value="bolsos">
+         Bolsos
+        </option>
+        <option value="accesorios">
+         Accesorios
+        </option>
+       </select>
+      </div>
+      <div class="campo">
+       <label for="estado">
+        ESTADO
+       </label>
+       <select id="estado">
+        <option>
+         Usado · Como nuevo
+        </option>
+        <option>
+         Usado · Buen estado
+        </option>
+        <option>
+         Nuevo
+        </option>
+       </select>
+      </div>
+      <div class="campo">
+       <label for="talla">
+        TALLA
+       </label>
+       <select id="talla">
+        <option value="">
+         No aplica
+        </option>
+        <option>
+         XS
+        </option>
+        <option>
+         S
+        </option>
+        <option>
+         M
+        </option>
+        <option>
+         L
+        </option>
+        <option>
+         XL
+        </option>
+       </select>
+      </div>
+      <div class="campo">
+       <label for="genero-publicar">
+        Sección
+       </label>
+       <select id="genero-publicar">
+        <option value="unisex">
+         Unisex
+        </option>
+        <option value="hombre">
+         Hombre
+        </option>
+        <option value="mujer">
+         Mujer
+        </option>
+       </select>
+      </div>
+      <div class="campo">
+       <label for="precio">
+        PRECIO (COP)
+       </label>
+       <input id="precio" max="100000000" min="1" name="precio" placeholder="$ 0 COP" required="" step="1" type="number"/>
+      </div>
+      <div class="campo">
+       <label for="ubicacion">
+        UBICACIÓN
+       </label>
+       <input id="ubicacion" maxlength="100" name="ubicacion" placeholder="Cali, Valle del Cauca" required="" type="text"/>
+      </div>
+     </div>
+     <div class="campo">
+      <label for="descripcion">
+       DESCRIPCIÓN
+      </label>
+      <textarea id="descripcion" maxlength="1000" placeholder="Cuenta su historia, uso y detalles importantes…" required=""></textarea>
+     </div>
+     <label class="confirmacion">
+      <input id="confirmacion" required="" type="checkbox"/>
+      Confirmo que las fotos y la información son reales.
+     </label>
+     <button class="boton-principal" type="submit">
+      PUBLICAR PRODUCTO
+     </button>
+     <p id="error-publicar" role="status">
+     </p>
+    </div>
+    <!-- Género permite que Hombre / Mujer también filtre anuncios de usuarios. -->
+   </form>
+  </main>
+  <!-- El footer también se comparte desde componentes.js. -->
+  <div id="footer-compartido">
+  </div>
+  <p class="mensaje-interaccion" hidden="" id="mensaje-interaccion" role="status">
+  </p>
+ </body>
+</html>

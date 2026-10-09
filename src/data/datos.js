@@ -113,18 +113,19 @@ productos.forEach(function(producto) {
   producto.precio = Math.round(producto.precio * CAMBIO_DE_PRUEBA);
   producto.oferta = producto.id === 1 || producto.id === 8 || producto.id === 11;
   producto.precioAnterior = producto.oferta ? producto.precio : null;
-  if (producto.oferta) producto.precio = Math.round(producto.precio * 0.8);
+  
+    if (producto.oferta) producto.precio = Math.round(producto.precio * 0.8);
   // Metadatos simulados para practicar filtros y selección de tallas.
-  producto.ofertaSimulada = producto.oferta;
-  producto.tallas = producto.categoria === "ropa" ? ["XS", "S", "M", "L", "XL"] : [];
-  producto.genero = [2, 4, 5].indexOf(producto.id) !== -1 ? "mujer" : "unisex";
-  producto.estado = "Nuevo";
-  producto.ubicacion = "Tienda oficial";
-  producto.descripcion = producto.nombre + ". Producto del catálogo de Álvaro Díaz. " +
+    producto.ofertaSimulada = producto.oferta;
+    producto.tallas = producto.categoria === "ropa" ? ["XS", "S", "M", "L", "XL"] : [];
+    producto.genero = [2, 4, 5].indexOf(producto.id) !== -1 ? "mujer" : "unisex";
+    producto.estado = "Nuevo";
+    producto.ubicacion = "Tienda oficial";
+    producto.descripcion = producto.nombre + ". Producto del catálogo de Álvaro Díaz. " +
     "Consulta disponibilidad y características antes de comprar.";
-  producto.metadatosSimulados = true;
+    producto.metadatosSimulados = true;
   // No inventamos opiniones de clientes: cada producto tiene su propio arreglo.
-  producto.resenas = [];
+    producto.resenas = [];
 });
 
 /* Cuenta mock exigida por la rúbrica; solo sirve en este prototipo local. */

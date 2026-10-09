@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <!-- viewport permite adaptar los mismos elementos a móvil y escritorio. -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Inicio de sesión | YokoMarket
+  </title>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/sistema.css" rel="stylesheet"/>
+  <!-- defer respeta el orden: header, almacenamiento, datos, DOM y vista. -->
+  <script defer="" src="../js/componentes.js">
+  </script>
+  <script defer="" src="../js/almacenamiento.js">
+  </script>
+  <script defer="" src="../data/datos.js">
+  </script>
+  <script defer="" src="../js/productos.js">
+  </script>
+  <script defer="" src="../js/interacciones.js">
+  </script>
+  <script defer="" src="../js/main.js">
+  </script>
+  <script defer="" src="../js/paneles.js">
+  </script>
+  <script defer="" src="../js/login.js">
+  </script>
+  <link href="../css/ajustes.css" rel="stylesheet"/>
+ </head>
+ <body data-base="../../" data-vista="login">
+  <!-- No se copia el header: la función cargarHeader lo genera aquí. -->
+  <div id="header-compartido">
+  </div>
+  <main id="contenido">
+   <!-- Dos columnas: presentación y formulario de ingreso. -->
+   <section class="cuenta-layout">
+    <aside aria-label="Comunidad YokoMarket" class="cuenta-hero">
+     <p class="logo">
+      YOKOMARKET
+     </p>
+     <h2>
+      TU COLECCIÓN
+      <br/>
+      EMPIEZA AQUÍ
+     </h2>
+     <p>
+      Compra, vende y conecta con otros fans.
+     </p>
+    </aside>
+    <form class="form-cuenta" id="form-login">
+     <h1>
+      HOLA DE NUEVO
+     </h1>
+     <p>
+      Entra y sigue coleccionando.
+     </p>
+     <div class="campo">
+      <label for="correo">
+       CORREO ELECTRÓNICO
+      </label>
+      <input autocomplete="username" id="correo" name="correo" required="" type="email"/>
+     </div>
+     <div class="campo">
+      <label for="contrasena">
+       CONTRASEÑA
+      </label>
+      <input autocomplete="current-password" id="contrasena" name="contrasena" required="" type="password"/>
+     </div>
+     <button class="boton-principal" type="submit">
+      INICIAR SESIÓN
+     </button>
+     <a href="registro.html">
+      ¿No tienes cuenta? Regístrate
+     </a>
+     <p id="error-formulario" role="status">
+     </p>
+     <p class="nota-local">
+      Cuenta de prueba local: usa datos de ejemplo.
+     </p>
+    </form>
+   </section>
+  </main>
+  <!-- El footer también se comparte desde componentes.js. -->
+  <div id="footer-compartido">
+  </div>
+  <p class="mensaje-interaccion" hidden="" id="mensaje-interaccion" role="status">
+  </p>
+ </body>
+</html>
