@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <!-- viewport permite adaptar los mismos elementos a móvil y escritorio. -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Registro | YokoMarket
+  </title>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/sistema.css" rel="stylesheet"/>
+  <!-- defer respeta el orden: header, almacenamiento, datos, DOM y vista. -->
+  <script defer="" src="../js/componentes.js">
+  </script>
+  <script defer="" src="../js/almacenamiento.js">
+  </script>
+  <script defer="" src="../data/datos.js">
+  </script>
+  <script defer="" src="../js/productos.js">
+  </script>
+  <script defer="" src="../js/interacciones.js">
+  </script>
+  <script defer="" src="../js/main.js">
+  </script>
+  <script defer="" src="../js/paneles.js">
+  </script>
+  <script defer="" src="../js/registro.js">
+  </script>
+  <link href="../css/ajustes.css" rel="stylesheet"/>
+ </head>
+ <body data-base="../../" data-vista="registro">
+  <!-- No se copia el header: la función cargarHeader lo genera aquí. -->
+  <div id="header-compartido">
+  </div>
+  <main id="contenido">
+   <!-- required y type=email permiten validaciones básicas del navegador. -->
+   <section class="cuenta-layout">
+    <aside aria-label="Comunidad YokoMarket" class="cuenta-hero">
+     <p class="logo">
+      YOKOMARKET
+     </p>
+     <h2>
+      TU COLECCIÓN
+      <br/>
+      EMPIEZA AQUÍ
+     </h2>
+     <p>
+      Compra, vende y conecta con otros fans.
+     </p>
+    </aside>
+    <form class="form-cuenta" id="form-registro">
+     <h1>
+      CREA TU CUENTA
+     </h1>
+     <p>
+      Únete a la comunidad YokoMarket.
+     </p>
+     <div class="campo">
+      <label for="nombre">
+       NOMBRE DE USUARIO
+      </label>
+      <input autocomplete="nickname" id="nombre" maxlength="40" name="nombre" required="" type="text"/>
+     </div>
+     <div class="campo">
+      <label for="correo">
+       CORREO ELECTRÓNICO
+      </label>
+      <input autocomplete="username" id="correo" name="correo" required="" type="email"/>
+     </div>
+     <div class="campo">
+      <label for="contrasena">
+       CONTRASEÑA
+      </label>
+      <input autocomplete="new-password" id="contrasena" minlength="6" name="contrasena" required="" type="password"/>
+     </div>
+     <div class="campo">
+      <label for="confirmar">
+       CONFIRMAR CONTRASEÑA
+      </label>
+      <input autocomplete="new-password" id="confirmar" minlength="6" name="confirmar" required="" type="password"/>
+     </div>
+     <button class="boton-principal" type="submit">
+      CREAR CUENTA
+     </button>
+     <a href="login.html">
+      ¿Ya tienes cuenta? Inicia sesión
+     </a>
+     <p id="error-formulario" role="status">
+     </p>
+     <p class="nota-local">
+      Registro de prueba en este navegador. Usa una contraseña de ejemplo.
+     </p>
+    </form>
+   </section>
+  </main>
+  <!-- El footer también se comparte desde componentes.js. -->
+  <div id="footer-compartido">
+  </div>
+  <p class="mensaje-interaccion" hidden="" id="mensaje-interaccion" role="status">
+  </p>
+ </body>
+</html>

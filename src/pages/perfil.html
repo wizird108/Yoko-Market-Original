@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <!-- viewport permite adaptar los mismos elementos a móvil y escritorio. -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Perfil y dashboard | YokoMarket
+  </title>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/sistema.css" rel="stylesheet"/>
+  <!-- defer respeta el orden: header, almacenamiento, datos, DOM y vista. -->
+  <script defer="" src="../js/componentes.js">
+  </script>
+  <script defer="" src="../js/almacenamiento.js">
+  </script>
+  <script defer="" src="../data/datos.js">
+  </script>
+  <script defer="" src="../js/productos.js">
+  </script>
+  <script defer="" src="../js/interacciones.js">
+  </script>
+  <script defer="" src="../js/main.js">
+  </script>
+  <script defer="" src="../js/paneles.js">
+  </script>
+  <script defer="" src="../js/perfil.js">
+  </script>
+  <link href="../css/ajustes.css" rel="stylesheet"/>
+ </head>
+ <body data-base="../../" data-vista="perfil">
+  <!-- No se copia el header: la función cargarHeader lo genera aquí. -->
+  <div id="header-compartido">
+  </div>
+  <main id="contenido">
+   <!-- JavaScript completa la información de la sesión y sus anuncios. -->
+   <section class="perfil-resumen">
+    <div aria-hidden="true" class="avatar-texto" id="avatar-texto">
+     Y
+    </div>
+    <div class="identidad">
+     <h1 id="nombre-perfil">
+      Mi perfil
+     </h1>
+     <p id="correo-perfil">
+     </p>
+     <button class="boton-texto" id="cerrar-sesion" type="button">
+      Cerrar sesión
+     </button>
+    </div>
+    <div class="estadistica">
+     <strong id="cantidad-anuncios">
+      0
+     </strong>
+     <span>
+      PRODUCTOS ACTIVOS
+     </span>
+    </div>
+    <div class="estadistica">
+     <strong id="cantidad-carrito">
+      0
+     </strong>
+     <span>
+      ÍTEMS EN MI BOLSA
+     </span>
+    </div>
+    <!-- Tercera estadística conectada a favoritos de Web Storage. -->
+    <div class="estadistica">
+     <strong id="cantidad-favoritos">
+      0
+     </strong>
+     <span>
+      EN MI WISHLIST
+     </span>
+    </div>
+   </section>
+   <section class="dashboard-layout">
+    <div class="panel anuncios-panel">
+     <div class="fila-titulo">
+      <h2>
+       MIS ANUNCIOS
+      </h2>
+      <a class="boton-principal" href="publicar.html">
+       + PUBLICAR PRODUCTO
+      </a>
+     </div>
+     <div id="mis-anuncios">
+     </div>
+    </div>
+    <!-- Columna de Wishlist: JavaScript crea las filas desde los IDs guardados. -->
+    <aside class="panel resumen-panel">
+     <h2>
+      WISHLIST
+     </h2>
+     <div id="lista-wishlist">
+     </div>
+    </aside>
+   </section>
+  </main>
+  <!-- El footer también se comparte desde componentes.js. -->
+  <div id="footer-compartido">
+  </div>
+  <p class="mensaje-interaccion" hidden="" id="mensaje-interaccion" role="status">
+  </p>
+ </body>
+</html>
